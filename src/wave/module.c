@@ -4,14 +4,13 @@
 
 #include "components/cie_rgb.h"
 
-PyObject *wave_length_to_rgb(PyObject *self, PyObject *args, PyObject *keywds)
+PyObject *wave_length_to_rgb(PyObject *self, PyObject *args)
 {
     PyObject *result;
     unsigned char *rgb;
     double wave_length;
-    static char *kwlist[] = {"wave_length", NULL};
 
-    if (! PyArg_ParseTupleAndKeywords(args, keywds, "d", kwlist, &wave_length))
+    if (! PyArg_ParseTuple(args, "d", &wave_length))
         return NULL;
 
     rgb = wave_length_to_rgb_c(wave_length);
