@@ -11,7 +11,7 @@ setup(
     name="sepl-light-lib",
     version=__version__,
     author=__author__,
-    description="",
+    description="Library for convenient work with interference phenomena",
     url="https://github.com/Sersoid/SEPL-Light-Lib",
     license="MIT",
     classifiers=[
