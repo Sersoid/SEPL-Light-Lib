@@ -26,11 +26,11 @@ setup(
             name="_sepl_light_lib",
             sources=[
                 "src/extension.c",
-                "src/wave/module.c",
+                "src/wave/wave_module.c",
                 "src/wave/components/cie_rgb.c"
             ],
             depends=[
-                "src/wave/module.h",
+                "src/wave/wave_module.h",
                 "src/wave/components/cie_rgb.h"
             ],
             include_dirs=[

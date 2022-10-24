@@ -2,7 +2,7 @@
 #define PY_SSIZE_T_CLEAN
 #include <Python.h>
 
-#include "components/cie_rgb.h"
+#include "cie_rgb.h"
 
 PyObject *wave_length_to_rgb(PyObject *self, PyObject *args)
 {
