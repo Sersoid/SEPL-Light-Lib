@@ -11,7 +11,7 @@ setup(
     name="sepl-light-lib",
     version=__version__,
     author=__author__,
-    description="",
+    description="Library for convenient work with interference phenomena",
     url="https://github.com/Sersoid/SEPL-Light-Lib",
     license="MIT",
     classifiers=[
@@ -26,12 +26,16 @@ setup(
             name="_sepl_light_lib",
             sources=[
                 "src/extension.c",
-                "src/wave/module.c",
+                "src/wave/wave_module.c",
                 "src/wave/components/cie_rgb.c"
             ],
             depends=[
-                "src/wave/module.h",
+                "src/wave/wave_module.h",
                 "src/wave/components/cie_rgb.h"
+            ],
+            include_dirs=[
+                "src/wave",
+                "src/wave/components"
             ],
             define_macros=[
                 ('SEPLLIGHTLIB_VERSION', __version__),

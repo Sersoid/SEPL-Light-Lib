@@ -2,7 +2,7 @@
 #define PY_SSIZE_T_CLEAN
 #include <Python.h>
 
-#include "wave/module.h"
+#include "wave_module.h"
 
 #define _STR(x) #x
 #define STR(x) _STR(x)

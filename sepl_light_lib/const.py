@@ -1,4 +1,4 @@
-from math import pi as pi
+from math import pi as _pi
 
 m = 1.0
 cm = 1e-2 * m
@@ -10,9 +10,9 @@ rad = 1.0
 mrad = 1e-3 * rad
 urad = 1e-6 * rad
 
-deg = (2 * pi * rad) / 360
+deg = (2 * _pi * rad) / 360
 
 W = 1.0
-mW = 1e-3*W
+mW = 1e-3 * W
 
-PI = pi
+pi = _pi
