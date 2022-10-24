@@ -33,6 +33,10 @@ setup(
                 "src/wave/module.h",
                 "src/wave/components/cie_rgb.h"
             ],
+            include_dirs=[
+                "src/wave",
+                "src/wave/components"
+            ],
             define_macros=[
                 ('SEPLLIGHTLIB_VERSION', __version__),
                 ('SEPLLIGHTLIB_AUTHOR', __author__)
