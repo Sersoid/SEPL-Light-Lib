@@ -43,9 +43,9 @@ unsigned char *xyz_to_srgb(const double *xyz)
     unsigned char *result = malloc(3 * sizeof(char));
     double x = xyz[0], y = xyz[1], z = xyz[2];
 
-    result[0] = strip_color(3.2406255 * x + -1.537208  * y + -0.4986286 * z) * 256;
-    result[1] = strip_color(-0.9689307 * x + 1.8757561 * y + 0.0415175 * z) * 256;
-    result[2] = strip_color(0.0557101 * x + -0.2040211 * y + 1.0569959 * z) * 256;
+    result[0] = round(strip_color(3.2406255 * x + -1.537208  * y + -0.4986286 * z) * 255);
+    result[1] = round(strip_color(-0.9689307 * x + 1.8757561 * y + 0.0415175 * z) * 255);
+    result[2] = round(strip_color(0.0557101 * x + -0.2040211 * y + 1.0569959 * z) * 255);
 
     return result;
 }
