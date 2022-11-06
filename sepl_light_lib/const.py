@@ -6,6 +6,10 @@ mm = 1e-3 * m
 um = 1e-6 * m
 nm = 1e-9 * m
 
+hz = 1.0
+mhz = 1e-3 * hz
+uhz = 1e-6 * hz
+
 rad = 1.0
 mrad = 1e-3 * rad
 urad = 1e-6 * rad
