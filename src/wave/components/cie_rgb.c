@@ -1,9 +1,9 @@
 #include <math.h>
 #include <stdlib.h>
 
-double *cie1931_to_xyz(double wave_length);
-unsigned char *xyz_to_srgb(const double *xyz);
-double strip_color(double color);
+static double *cie1931_to_xyz(double wave_length);
+static unsigned char *xyz_to_srgb(const double *xyz);
+static double strip_color(double color);
 
 unsigned char *wave_length_to_rgb_c(double wave_length)
 {
@@ -17,7 +17,7 @@ unsigned char *wave_length_to_rgb_c(double wave_length)
     return rgb;
 }
 
-double *cie1931_to_xyz(double wave_length)
+static double *cie1931_to_xyz(double wave_length)
 {
     double t1, t2, t3, *result = malloc(3 * sizeof(double));
 
@@ -38,7 +38,7 @@ double *cie1931_to_xyz(double wave_length)
     return result;
 }
 
-unsigned char *xyz_to_srgb(const double *xyz)
+static unsigned char *xyz_to_srgb(const double *xyz)
 {
     unsigned char *result = malloc(3 * sizeof(char));
     double x = xyz[0], y = xyz[1], z = xyz[2];
@@ -50,7 +50,7 @@ unsigned char *xyz_to_srgb(const double *xyz)
     return result;
 }
 
-double strip_color(double color)
+static double strip_color(double color)
 {
     color = color > 1 ? 1 : (color < 0 ? 0 : color);
 
